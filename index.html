@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spesial Buat Mira Guys! 🎉💋💝💋🎉</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            color: #2c3e50;
+            text-align: center;
+            padding: 20px;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 35px 25px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            max-width: 400px;
+            width: 100%;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+        h1 {
+            font-size: 26px;
+            color: #d81b60;
+            margin-bottom: 15px;
+        }
+        .special-font {
+            font-family: 'Caveat', cursive;
+            font-size: 38px;
+            color: #e73c7e;
+        }
+        p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .typewriter {
+            font-size: 16px;
+            font-weight: 600;
+            min-height: 80px;
+            color: #4a4a4a;
+        }
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .btn {
+            background: linear-gradient(135deg, #e73c7e, #d81b60);
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(216, 27, 96, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:active {
+            transform: scale(0.95);
+        }
+        .btn-secondary {
+            background: linear-gradient(135deg, #23a6d5, #23d5ab);
+            box-shadow: 0 5px 15px rgba(35, 166, 213, 0.3);
+        }
+        .btn-wa {
+            background: #25D366;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+        .hidden {
+            display: none !important;
+        }
+        .emoji-anim {
+            font-size: 70px;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HALAMAN 1: Pembuka -->
+    <div id="halaman1" class="card">
+        <div class="emoji-anim">🎁🎉</div>
+        <h1>Ada Paket Spesial!</h1>
+        <p>Sebuah kejutan interaktif telah disiapkan khusus untuk hari pentingmu hari ini.</p>
+        <button class="btn" onclick="bukaKado()">Buka Sekarang 🎁🎉</button>
+    </div>
+
+    <!-- HALAMAN 2: Ucapan Utama + Fitur Efek Ketik -->
+    <div id="halaman2" class="card hidden">
+        <div class="emoji-anim">🎂</div>
+        <h1 class="special-font">Happy Birthday to my beloved girlfriend Mira Guys!💁‍♀️💝 ✨</h1>
+        
+        <!-- Area Teks Efek Mengetik -->
+        <p id="teksKetik" class="typewriter"></p>
+        
+        <div class="btn-group">
+            <button class="btn" onclick="efekPesta()">Bikin Ramai Lagi! 🎉</button>
+            <button class="btn btn-secondary" onclick="tanyaKado()">Mau Kado Nggak? 🎁👀</button>
+            <button id="btnLanjut" class="btn hidden" onclick="pindahHalaman3()">Lanjut ➡️😆</button>
+        </div>
+    </div>
+
+    <!-- HALAMAN 3: Fitur Balasan WhatsApp -->
+    <div id="halaman3" class="card hidden">
+        <div class="emoji-anim">💝</div>
+        <h1>Makasi Banyak Ya!</h1>
+        <p>Makasih banyak sudah meluangkan waktu buat buka web kecil ini. Jangan lupa bahagia hari ini dan seterusnya!</p>
+        <p>Kirim pesan ke yang bikin web ini yuk sebagai tanda kamu sudah baca:</p>
+        
+        <div class="btn-group">
+            <!-- GANTI nomor teliti di bawah (Gunakan format 62 di depan) -->
+            <a href="https://wa.me/6282115905160?text=Makasih%20banyak%20buat%20kejutan%20web%20ulang%20tahunnya!%20Aku%20suka%20banget%20🥺❤️" 
+               target="_blank" class="btn btn-wa">
+               Kirim Balasan ke WA 😆💬
+            </a>
+        </div>
+    </div>
+
+    <!-- Musik Latar -->
+    <audio id="musik" loop>
+        <source src="https://youtu.be/WrfDmDB1Ju8?si=_NXoabIPbun-QvbU" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Teks yang akan diketik otomatis (Bisa kamu ubah sesukamu)
+        const pesanUcapan = "Selamat bertambah usia! Semoga tahun ini membawa banyak kebaikan, ketenangan, dan kebahagiaan baru buat kamu. Makasih ya sudah menjadi salah satu bagian terbaik dalam hidupku. Jalani hari ini dengan senyuman paling bahagia, karena kamu sangat layak untuk itu. Happy birthday Sayang! ✨, Semoga Tahun ini Kita bisa isi semua wishlist kita yaa💗";
+        let indexTeks = 0;
+
+        function bukaKado() {
+            document.getElementById('halaman1').classList.add('hidden');
+            document.getElementById('halaman2').classList.remove('hidden');
+            
+            // Putar musik latar
+            const audio = document.getElementById('musik');
+            audio.play().catch(err => console.log("Audio dimainkan setelah interaksi"));
+
+            // Mulai efek ketik otomatis
+            mulaiKetik();
+            
+            // Ledakan confetti awal
+            efekPesta();
+        }
+
+        function mulaiKetik() {
+            if (indexTeks < pesanUcapan.length) {
+                document.getElementById("teksKetik").innerHTML += pesanUcapan.charAt(indexTeks);
+                indexTeks++;
+                setTimeout(mulaiKetik, 45); // Kecepatan mengetik (semakin kecil makin cepat)
+            } else {
+                // Munculkan tombol lanjut setelah teks selesai mengetik
+                document.getElementById("btnLanjut").classList.remove('hidden');
+            }
+        }
+
+        function efekPesta() {
+            // Efek hujan kertas warna-warni yang meriah
+            var duration = 3 * 1000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 3,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 }
+                });
+                confetti({
+                    particleCount: 3,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 }
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+
+        // Fitur opsi interaktif pesan acak saat tombol kado ditekan
+        function tanyaKado() {
+            const opsiPesan = [
+                "Dih, minta kado? Ketemu dulu sini! 😜",
+                "Kado? Doa terbaik aja dulu ya tahun ini! Hahaha amin 🙏",
+                "Ciee yang nungguin kado.. chat orangnya gih! 🤪",
+                "Kadonya menyusul, yang penting traktirannya dulu dong! 🍕"
+            ];
+            const acak = opsiPesan[Math.floor(Math.random() * opsiPesan.length)];
+            alert(acak);
+        }
+
+        function pindahHalaman3() {
+            document.getElementById('halaman2').classList.add('hidden');
+            document.getElementById('halaman3').classList.remove('hidden');
+            confetti({ particleCount: 150, spread: 80 });
+        }
+    </script>
+</body>
+</html>
